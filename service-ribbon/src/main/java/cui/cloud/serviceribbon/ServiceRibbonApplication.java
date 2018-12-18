@@ -11,9 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-//向服务中心注册
-//@EnableDiscoveryClient
-//开启Hystrix 熔断器
+//开启Hystrix 断路器
 @EnableHystrix
 public class ServiceRibbonApplication {
 

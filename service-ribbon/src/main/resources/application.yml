@@ -5,6 +5,7 @@ spring:
   application:
     name: service-ribbon
 
+#服务注册中心
 eureka:
   client:
     serviceUrl:

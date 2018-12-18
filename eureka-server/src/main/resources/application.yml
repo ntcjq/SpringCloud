@@ -9,9 +9,12 @@ eureka:
   instance:
     hostname: localhost
   client:
+    #是否注册自身到eureka服务器（没必要注册自身，所以这里是false）
     registerWithEureka: false
+    #是否从eureka服务器获取注册信息（没必要获取自身，所以这里是false）
     fetchRegistry: false
     serviceUrl:
+      #设置eureka服务器所在的地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 

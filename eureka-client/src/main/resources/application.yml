@@ -4,7 +4,7 @@ server:
 spring:
   application:
     name: service-hi
-
+#服务注册中心
 eureka:
   client:
     serviceUrl:

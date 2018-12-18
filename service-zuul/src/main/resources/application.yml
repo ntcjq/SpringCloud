@@ -4,7 +4,7 @@ server:
 spring:
   application:
     name: service-zuul
-
+#服务注册中心
 eureka:
   client:
     serviceUrl:
@@ -13,7 +13,9 @@ eureka:
 zuul:
   routes:
     api-a:
+      #拦截的路径
       path: /api-a/**
+      #执行该请求的服务
       serviceId: service-ribbon
     api-b:
       path: /api-b/**
