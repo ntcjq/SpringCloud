@@ -20,7 +20,7 @@ public class HiController {
     HiService hiService;
 
     @GetMapping(value = "/hi")
-    public String sayHi(@RequestParam String name) {
+    public String sayHi(@RequestParam(value = "name",defaultValue = "cjq") String name) {
         System.out.println("调用了Fegin的Hi Controller");
         return hiService.sayHiFromClientOne( name );
     }

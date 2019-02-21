@@ -6,6 +6,12 @@ spring:
     name: eurka-server
 
 eureka:
+  server:
+    #Eureka自我保护机制，默认打开状态，建议生产环境打开此配置。
+    #测试时关闭自我保护机制，保证不可用服务及时被踢出
+    enable-self-preservation: false
+    #清理间隔（单位毫秒，默认是60*1000）
+    eviction-interval-timer-in-ms: 4000
   instance:
     hostname: localhost
   client:

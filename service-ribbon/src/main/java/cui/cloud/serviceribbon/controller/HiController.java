@@ -16,7 +16,7 @@ public class HiController {
     HiService hiService;
 
     @GetMapping(value = "/hi")
-    public String hi(@RequestParam String name) {
+    public String hi(@RequestParam(value="name", defaultValue = "cjq") String name) {
         System.out.println("调用了Ribbon的Hi Controller");
         return hiService.hiService( name );
     }

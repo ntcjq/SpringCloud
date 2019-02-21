@@ -26,6 +26,7 @@ public class HiService {
      */
     @HystrixCommand(fallbackMethod = "hiError")
     public String hiService(String name) {
+        //这边service-hi和SERVICE-HI都可以
         return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
     }
 

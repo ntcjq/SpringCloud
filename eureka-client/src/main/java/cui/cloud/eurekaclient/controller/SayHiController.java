@@ -17,6 +17,7 @@ public class SayHiController {
 
     @RequestMapping("/hi")
     public String home(@RequestParam(value = "name", defaultValue = "cjq") String name) {
+        System.out.println("调用了HiService的Hi Controller");
         return "hi " + name + " ,i am from port:" + port;
     }
 }
